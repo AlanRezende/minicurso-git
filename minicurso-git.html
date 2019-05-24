@@ -1,0 +1,207 @@
+<style type="text/css">
+    body{
+        line-height: 3rem   ;
+        font-family: sans-serif;
+        margin: 30vh 60px;
+        background: #fafafa;
+        font-size: 170%;
+        color: #0e3256;
+    }
+    a{
+        color: #0c5394
+    }
+    img{
+        width:100%;
+        max-width: 100%;
+    }
+    pre{
+        font-size: 2rem;
+        font-weight: bold;
+        background: #fff;
+        border: #ccc 1px solid;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    hr{
+        margin: 50vh 0px;
+        border:1px solid #ccc;
+        border-bottom: 0px;
+        /*margin-bottom: 100vh;*/
+    }
+    #logo{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 64px;
+        opacity: .7;
+    }
+</style>
+<h1>Minicurso Git</h1>
+<p>
+Por Alan Rezende <i>&lt;alan@turbinabiz.com.br&gt;</i> <br>
+<a href="https://www.turbinabiz.com.br">TurbinaBiz Marketing Prático</a> <br>
+</p>
+<p>
+    19:20 às 20:45 (1h 25m) - Parte I <br>
+    20:45 às 21:00 (15m) - Coffee <br>
+    21:00 às 22:20 (1h 20m) - Parte II <br>
+</p>
+
+<hr>
+<h2>O que é?</h2>
+<ul>
+    <li>Sistema de controle de versões</li>
+    <li>Mantém um histórico de tudo O QUE foi feito, QUANDO foi feito e por QUEM foi feito</li>
+</ul>
+<hr>
+<h2>Para que serve</h2>
+<ul>
+    <li>Controle de histórico</li>
+    <li>Trabalho em equipe</li>
+    <li>Marcação e resgate de versões estáveis</li>
+    <li>Organização</li>
+</ul>
+<hr>
+<h2>Conceitos</h2>
+<b>Repos (repositórios)</b> - Um projeto, a pasta principal do GIT
+<br>
+<b>Commits</b> - Registro de alterações de arquivos
+<br>
+<b>Branches (ramificações)</b> - Usados para controle de desenvolvimento: Master, Dev, Novo cadastro rápido, Hotfix
+<br>
+<b>Merges (fusões)</b> - União de duas branches
+<hr>
+<h2>Estados de um arquivo</h2>
+<img src="estados-de-um-arquivo.png" />
+<hr>
+<h2>Arquivo especial: .gitignore</h2>
+O GIT vai ignorar todos os arquivos listados neste arquivo
+<pre>
+Thumbs.db
+.DS_Store
+vendor/
+node_modules/
+</pre>
+<hr>
+
+
+
+
+<h2>Principais Comandos</h2>
+<hr>
+
+
+Para configurar os dados do autor
+<pre>
+git config --local user.name "Seu nome aqui"
+git config –-local user.email "Seu email aqui" <nome>
+</pre>
+--local por ser trocado por --global caso seja um computador seu.
+
+<hr>
+
+
+Inicializa o git no projeto.
+<pre>git init</pre>
+Todas as informações relacionadas ficam dentro da pasta <b>.git</b>
+<br>
+Se quiser tirar o git do projeto basta remover a pasta <b>.git</b>
+
+<hr>
+
+Para saber qual o estado atual dos nossos arquivos
+<pre>git status</pre>
+
+<hr>
+
+
+Para adicionar um arquivo ao staged
+<pre>git add nome-do-arquivo.xyz</pre>
+<br><br>
+Para adicionar todos
+<pre>git add .</pre>
+
+
+<hr>
+
+
+Para remover o arquivo do staged
+<pre>git rm --cached nome-do-arquivo.xyz</pre>
+
+<hr>
+Salva os arquivos do stage em uma commit, ao entrar esse comando uma descrição deve ser informada na próxima etapa.
+<pre>git commit</pre>
+Ou utilize este comando para adicionar a descrição rápida
+<pre>git commit -m "Descrição em linha"</pre>
+<hr>
+
+
+
+<hr>
+<h2>Repositórios Remotos</h2>
+<ol>
+    <li>Criar uma conta no <a href="https://github.com.br">github.com.br</a></li>
+    <li>Criar um repositório chamado SECOMP</li>
+    <li>Conectar o repositório à pasta atual</li>
+</ol>
+<hr>
+Clona um repositório remoto localmente
+<pre>git clone repositorio.git</pre>
+<hr>
+Baixa arquivos modificados do repositório remoto para o local
+<pre>git pull</pre>
+Para baixar todas as branches e tags
+<pre>git pull --all</pre>
+
+<hr>
+Envia arquivos do repositório local para o remoto
+<pre>git push</pre>
+Para enviar todas as branches e tags
+<pre>git push --all</pre>
+<hr>
+<h2>Resumo dos Principais Comandos</h2>
+<pre>
+git init
+git add arquivo.xyz
+git rm --cached arquivo.xyz
+
+git commit
+git push
+git push --all
+git pull
+git pull --all
+git clone
+
+git checkout nome-da-branch
+git branch
+</pre>
+
+Branches
+<pre>
+git branch dev
+git checkout dev
+git checkout master
+git branch -d nome-da-branch
+</pre>
+
+Merges
+<pre>
+git merge dev
+</pre>
+
+Tags
+<pre>
+git tag
+git tag v0.0.1a
+</pre>
+
+
+
+Análise
+<pre>
+git log
+git diff
+</pre>
+
+
+<img src="turbinabiz.png" id="logo">
