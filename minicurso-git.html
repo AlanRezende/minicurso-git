@@ -2,7 +2,7 @@
     body{
         line-height: 3rem   ;
         font-family: sans-serif;
-        margin: 30vh 60px;
+        margin: 20vh 60px;
         background: #fafafa;
         font-size: 170%;
         color: #0e3256;
@@ -39,7 +39,7 @@
 <h1>Minicurso Git</h1>
 <p>
 Por Alan Rezende <i>&lt;alan@turbinabiz.com.br&gt;</i> <br>
-<a href="https://www.turbinabiz.com.br">TurbinaBiz Marketing Prático</a> <br>
+<a target="_blank" href="https://www.turbinabiz.com.br">TurbinaBiz Marketing Prático</a> <br>
 </p>
 <p>
     19:20 às 20:45 (1h 25m) - Parte I <br>
@@ -112,9 +112,9 @@ Se quiser tirar o git do projeto basta remover a pasta <b>.git</b>
 Para saber qual o estado atual dos nossos arquivos
 <pre>git status</pre>
 
+
+
 <hr>
-
-
 Para adicionar um arquivo ao staged
 <pre>git add nome-do-arquivo.xyz</pre>
 <br><br>
@@ -135,7 +135,43 @@ Ou utilize este comando para adicionar a descrição rápida
 <pre>git commit -m "Descrição em linha"</pre>
 <hr>
 
+Descartar alterações em um arquivo
+<pre>git checkout -- nome-do-arquivo</pre>
+Descartar alterações em todos os arquivos
+<pre>git reset --hard</pre>
 
+
+<hr>
+
+Cria uma nova branch
+<pre>git branch nome-da-branch</pre>
+Muda para uma branch
+<pre>git checkout nome-da-branch</pre>
+<br>
+Lista todas as branches
+<pre>git branch</pre>
+
+
+<hr>
+
+Cria uma nova tag
+<pre>git tag v0.0.0a</pre>
+<br>
+Lista todas as tags
+<pre>git tag</pre>
+
+
+<hr>
+Nomeclatura para versionamento
+<br>
+major.minor.patch (maior.menor.correção) <br>
+
+<ol>
+    <li>Major: Quando não há compatibilidades com a versão anterior</li>
+    <li>Minor: Para novas funções, mantendo a compatibilidade</li>
+    <li>Patch: para ajuste de bugs</li>
+    <li>a - alpha / b - beta / pre-release</li>
+</ol>
 
 <hr>
 <h2>Repositórios Remotos</h2>
@@ -145,19 +181,28 @@ Ou utilize este comando para adicionar a descrição rápida
     <li>Conectar o repositório à pasta atual</li>
 </ol>
 <hr>
+Lista os repositorios remotos
+<pre>git remote</pre>
+Lista as urls
+<pre>git remote -v</pre>
+<hr>
 Clona um repositório remoto localmente
 <pre>git clone repositorio.git</pre>
 <hr>
 Baixa arquivos modificados do repositório remoto para o local
 <pre>git pull</pre>
-Para baixar todas as branches e tags
+Para baixar todas as branches
 <pre>git pull --all</pre>
+Para baixar todas as tags
+<pre>git pull --tags</pre>
 
 <hr>
 Envia arquivos do repositório local para o remoto
 <pre>git push</pre>
-Para enviar todas as branches e tags
+Para enviar todas as branches
 <pre>git push --all</pre>
+Para enviar todas as tags
+<pre>git pull --tags</pre>
 <hr>
 <h2>Resumo dos Principais Comandos</h2>
 <pre>
@@ -203,5 +248,15 @@ git log
 git diff
 </pre>
 
+<hr>
+<h2>Referências:</h2>
+<ul>
+    <li>
+        <a target="_blank" href="https://git-scm.com/docs/">[en] https://git-scm.com/docs/</a>
+    </li>
+    <li>
+        <a target="_blank" href="https://pt.slideshare.net/bismarckjunior/aprendendo-git">[pt] https://pt.slideshare.net/bismarckjunior/aprendendo-git</a>
+    </li>
+</ul>
 
 <img src="turbinabiz.png" id="logo">
