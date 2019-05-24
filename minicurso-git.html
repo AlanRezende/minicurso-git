@@ -81,13 +81,21 @@ Thumbs.db
 .DS_Store
 vendor/
 node_modules/
+uploads/
 </pre>
+<hr>
+Lembre-se, o GIT não é um sistema de backup para o seu sistema, mas sim para o código fonte do seu sistema.
+<br><br>
+Pastas de uploads, fotos e arquivos do usuário não devem ser adicionados ao GIT.
+<br><br>
+Tenha sempre um sistema de backup para os arquivos de usuários do sistema.
 <hr>
 
 
 
 
 <h2>Principais Comandos</h2>
+Agora é a hora! Mão na massa!
 <hr>
 
 
@@ -172,6 +180,27 @@ major.minor.patch (maior.menor.correção) <br>
     <li>Patch: para ajuste de bugs</li>
     <li>a - alpha / b - beta / pre-release</li>
 </ol>
+<hr>
+Análise das diferenças dos arquivos atuais para última commit
+<pre>
+git diff
+</pre>
+Mostra a lista com todas as commits realizadas no repositório
+<pre>git log</pre>
+Mostra quem é responsável por cada linha de um arquivo GIT
+<pre>git blame</pre>
+
+
+<hr>
+
+Salva o estados dos arquivos temporariamente para se trabalhar em outra coisa sem utilizar commits
+<pre>git stash</pre>
+Lista todos os Stash
+<pre>git stash list</pre>
+Pega os arquivos do Stash
+<pre>git stash apply</pre>
+Remove um Stash
+<pre>git stash drop</pre>
 
 <hr>
 <h2>Repositórios Remotos</h2>
@@ -204,6 +233,7 @@ Para enviar todas as branches
 Para enviar todas as tags
 <pre>git pull --tags</pre>
 <hr>
+<!--
 <h2>Resumo dos Principais Comandos</h2>
 <pre>
 git init
@@ -247,12 +277,16 @@ Análise
 git log
 git diff
 </pre>
-
 <hr>
+-->
+
 <h2>Referências:</h2>
 <ul>
     <li>
         <a target="_blank" href="https://git-scm.com/docs/">[en] https://git-scm.com/docs/</a>
+    </li>
+    <li>
+        <a target="_blank" href="https://git-scm.com/book/pt-br/v1/">[pt] Livro - Pro Git - Gratuito</a>
     </li>
     <li>
         <a target="_blank" href="https://pt.slideshare.net/bismarckjunior/aprendendo-git">[pt] https://pt.slideshare.net/bismarckjunior/aprendendo-git</a>
